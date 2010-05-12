@@ -1,0 +1,3 @@
+# time inside the files may be wrong but upstream maintainer recreates them for every release
+amavisd-milter source: ancient-autotools-helper-file aclocal/config.guess 2003-07-02
+amavisd-milter source: ancient-autotools-helper-file aclocal/config.sub 2003-07-04

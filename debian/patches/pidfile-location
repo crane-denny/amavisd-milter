@@ -1,0 +1,18 @@
+Description: Adapt location of pidfile for Debian
+Author: Harald Jenny <harald@a-little-linux-box.ag>
+Forwarded: not-needed
+Last-Update: 2010-03-16
+
+Index: b/amavisd-milter/main.c
+===================================================================
+--- a/amavisd-milter/main.c	2008-11-10 01:45:10.000000000 +0100
++++ b/amavisd-milter/main.c	2009-11-02 22:29:21.000000000 +0100
+@@ -45,7 +45,7 @@
+ int		max_wait = 5 * 60;
+ sem_t		max_sem_t;
+ sem_t	       *max_sem = NULL;
+-const char     *pid_file = LOCAL_STATE_DIR "/" PACKAGE ".pid";
++const char     *pid_file = "/var/run/amavis/" PACKAGE ".pid";
+ const char     *mlfi_socket = LOCAL_STATE_DIR "/" PACKAGE ".sock";
+ #ifdef HAVE_SMFI_SETBACKLOG
+ int		mlfi_socket_backlog = 0;

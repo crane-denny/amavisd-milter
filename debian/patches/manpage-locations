@@ -1,0 +1,112 @@
+Description: Adapt paths in manpage for Debian
+Author: Harald Jenny <harald@a-little-linux-box.ag>
+Forwarded: not-needed
+Last-Update: 2010-03-16
+
+Index: b/amavisd-milter/amavisd-milter.8
+===================================================================
+--- a/amavisd-milter/amavisd-milter.8	2009-10-29 15:53:14.000000000 +0100
++++ b/amavisd-milter/amavisd-milter.8	2010-02-23 19:30:44.000000000 +0100
+@@ -106,7 +106,7 @@
+ 20 minutes.
+ We suggest to use less than 10 minutes. 
+ .It Fl p Ar pidfile
+-Use this pid file (default /var/amavis/amavisd-milter.pid).
++Use this pid file (default /var/run/amavis/amavisd-milter.pid).
+ .It Fl P
+ When
+ .Sy amavisd-new
+@@ -121,7 +121,7 @@
+ .Sy sendmail
+ and
+ .Nm
+-(default /var/amavis/amavisd-milter.sock).
++(default /var/lib/amavis/amavisd-milter.sock).
+ The protocol spoken over this socket is
+ .Sy MILTER
+ (Mail FILTER).
+@@ -146,7 +146,7 @@
+ .Nm
+ and
+ .Sy amavisd-new
+-(default /var/amavis/amavisd.sock).
++(default /var/lib/amavis/amavisd.sock).
+ The protocol spoken over this socket is
+ .Sy AM.PDP
+ (AMavis Policy Delegation Protocol).
+@@ -181,7 +181,7 @@
+ .It Fl v
+ Report the version number and exit.
+ .It Fl w Ar directory
+-Set working directory (default /var/amavis).
++Set working directory (default /var/lib/amavis/tmp).
+ .El
+ .Ss Limited support for sendmail 8.12
+ .Bl -bullet -compact
+@@ -211,17 +211,17 @@
+ .Pp
+ .Sh FILES
+ .Bl -tag -width indent
+-.It Em /var/amavis/amavisd-milter.pid
++.It Em /var/run/amavis/amavisd-milter.pid
+ The default process-id file.
+-.It Em /var/amavis/amavisd-milter.sock
++.It Em /var/lib/amavis/amavisd-milter.sock
+ The default
+ .Sy sendmail
+ communication socket.
+-.It Em /var/amavis/amavisd.sock
++.It Em /var/lib/amavis/amavisd.sock
+ Th default
+ .Sy amavisd-new
+ communication socket.
+-.It Em /var/amavis
++.It Em /var/lib/amavis/tmp
+ The default working directory.
+ .El
+ .Sh POLICY BANK
+@@ -257,7 +257,7 @@
+ define(`confMILTER_MACROS_ENVFROM',
+ 	confMILTER_MACROS_ENVFROM`, r, b')
+ INPUT_MAIL_FILTER(`amavisd-milter',
+-	`S=local:/var/amavis/amavisd-milter.sock,
++	`S=local:/var/lib/amavis/amavisd-milter.sock,
+ 	F=T, T=S:10m;R:10m;E:10m')
+ .Ed
+ .Pp
+@@ -273,29 +273,29 @@
+ .Pp
+ First create working directory:
+ .Bd -literal -offset indent
+-mkdir /var/amavis/tmp
+-chmod 750 /var/amavis/tmp
+-chown amavis /var/amavis/tmp
++mkdir /var/lib/amavis/tmp
++chmod 750 /var/lib/amavis/tmp
++chown amavis /var/lib/amavis/tmp
+ .Ed
+ .Pp
+ Then start
+ .Nm
+ as non-priviledged user amavis:
+ .Pp
+-.Dl su - amavis -c \&" Ns Nm Fl w Ar /var/amavis/tmp Ns \&"
++.Dl su - amavis -c \&" Ns Nm Fl w Ar /var/lib/amavis/tmp Ns \&"
+ .Ss Limiting maximum concurrent connections to amavisd
+ To limit concurrent connections to 4 and fail after 10 minutes
+ (10*60 secs) of waiting run
+ .Nm
+ with this options:
+ .Pp
+-.Dl su - amavis -c \&" Ns Nm Fl w Ar /var/amavis/tmp Fl m Ar 4 Fl M Ar 600 Ns \&"
++.Dl su - amavis -c \&" Ns Nm Fl w Ar /var/lib/amavis/tmp Fl m Ar 4 Fl M Ar 600 Ns \&"
+ .Ss Troubleshooting
+ For troubleshooting run
+ .Nm
+ on the foreground and set debug level to appropriate level:
+ .Pp
+-.Dl su - amavis -c \&" Ns Nm Fl w Ar /var/amavis/tmp Fl f Fl d Ar level Ns \&"
++.Dl su - amavis -c \&" Ns Nm Fl w Ar /var/lib/amavis/tmp Fl f Fl d Ar level Ns \&"
+ .Pp
+ where debug levels are:
+ .Bl -tag -width "XXXX"

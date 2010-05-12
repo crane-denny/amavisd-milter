@@ -1,0 +1,19 @@
+amavisd-milter for Debian
+-------------------------
+
+As amavisd-milter does not have a config file all configuration
+is done in /etc/default/amavisd-milter, which is sourced by the
+package's init script.
+
+Via MILTERSOCKET you can specify the socket through which either
+sendmail or postfix connect to amavisd-milter - the syntax for
+unix is straight-forward just the file name, tcp uses the form
+inet:PORT@IPADDRESS.
+
+When you plan to use amavisd-milter with postfix you may also
+want to set the MILTERSOCKETOWNER and the MILTERSOCKETMODE
+directives, they will allow you to change the username as well
+as the the permissions of the socket after it has been created by
+the daemon.
+
+ -- Harald Jenny <harald@a-little-linux-box.at>  Mon, 10 Nov 2009 00:29:25 +0100

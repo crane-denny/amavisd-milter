@@ -1,0 +1,21 @@
+Source: amavisd-milter
+Section: mail
+Priority: extra
+Maintainer: Harald Jenny <harald@a-little-linux-box.at>
+Build-Depends: debhelper (>= 7.0.9), libmilter-dev
+Homepage: http://amavisd-milter.sourceforge.net/
+Standards-Version: 3.8.4
+
+Package: amavisd-milter
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, amavisd-new (>= 2.4.3)
+Recommends: sendmail (>= 8.13.8-3) | postfix (>= 2.3.8-2+etch1)
+Conflicts: amavisd-new-milter
+Description: amavisd-new interface for milter-capable MTAs
+ This package provides a milter for amavisd-new that works with
+ Sendmail or Postfix, using the AM.PDP protocol.
+ .
+ Replacing the older amavisd-new-milter program, amavisd-milter makes
+ use of the full functionality of amavisd-new. It supports using spam
+ and virus information header fields, rewriting message subjects,
+ adding address extensions, and selectively removing recipients.
