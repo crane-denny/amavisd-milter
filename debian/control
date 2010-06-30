@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Harald Jenny <harald@a-little-linux-box.at>
 Build-Depends: debhelper (>= 7.0.9), libmilter-dev
 Homepage: http://amavisd-milter.sourceforge.net/
-Standards-Version: 3.8.4
+Standards-Version: 3.9.0
 
 Package: amavisd-milter
 Architecture: any
