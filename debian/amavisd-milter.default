@@ -1,7 +1,7 @@
 # Defaults for amavisd-milter initscript
 # sourced by /etc/init.d/amavisd-milter
 # installed at /etc/default/amavisd-milter by the maintainer scripts
-# 2009-11-01 Harald Jenny
+# 2010-07-07 Harald Jenny
 
 # The user should be the one amavisd-new is running as
 #USER=amavis
