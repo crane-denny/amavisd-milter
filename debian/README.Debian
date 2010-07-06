@@ -16,4 +16,15 @@ directives, they will allow you to change the username as well
 as the the permissions of the socket after it has been created by
 the daemon.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Mon, 10 Nov 2009 00:29:25 +0100
+Please keep in mind that amavisd-milter (in contrary to the old
+amavisd-new-milter) uses the AM.PDP protocol to communicate with
+the amavisd daemon so a paragraph like the following has to be
+present in your amavisd-new config file:
+
+    $interface_policy{'SOCK'} = 'AM.PDP-SOCK';
+    $policy_bank{'AM.PDP-SOCK'} = {
+      protocol => 'AM.PDP',
+      auth_required_release => 0, # don't require secret-id for release
+    };
+
+ -- Harald Jenny <harald@a-little-linux-box.at>  Wed,  7 Jul 2010 00:22:44 +0200
