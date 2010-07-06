@@ -1,8 +1,9 @@
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
-  * Bumped Standards to 3.9.0 (no changes needed).
-  * Added a note about amavisd-new TEMPDIR to default file.
-  * Added a note about AM.PDP section in amavisd-new config to README.Debian.
+  * debian/control: Bumped Standards to 3.9.0 (no changes needed).
+  * debian/amavisd-milter.default: Added a note about amavisd-new TEMPDIR.
+  * debian/README.Debian: Added a note about AM.PDP section in amavisd-new
+    config.
 
  -- Harald Jenny <harald@a-little-linux-box.at>  Wed, 30 Jun 2010 22:40:21 +0200
 
