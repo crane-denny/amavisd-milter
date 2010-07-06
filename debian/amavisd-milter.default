@@ -24,7 +24,8 @@
 #AMAVISSOCKET=/var/lib/amavis/amavisd.sock
 
 # Here amavisd-milter stores the mails which should get
-# checked.
+# checked (needs to be changed when amavisd-new TEMPBASE
+# variable is modified!). 
 #WORKINGDIR=/var/lib/amavis/tmp
 
 # The parameters listed here will be passed directly to
