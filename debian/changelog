@@ -1,6 +1,7 @@
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
-  * debian/control: Bumped Standards to 3.9.0 (no changes needed).
+  * debian/control: Bumped Standards to 3.9.0 (no changes needed). Added Vcs-*
+    fields as package is now hosted in amavisd-new repository.
   * debian/amavisd-milter.default: Added a note about amavisd-new TEMPDIR.
   * debian/README.Debian: Added a note about AM.PDP section in amavisd-new
     config.
@@ -9,7 +10,7 @@ amavisd-milter (1.5.0-2) unstable; urgency=low
   * debian/stamp-patched, README.source: Removed as they were leftovers of
     pre-official packages.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Thu,  8 Jul 2010 14:09:28 +0200
+ -- Harald Jenny <harald@a-little-linux-box.at>  Thu,  8 Jul 2010 15:14:20 +0200
 
 amavisd-milter (1.5.0-1) unstable; urgency=medium
 
