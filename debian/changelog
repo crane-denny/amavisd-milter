@@ -1,7 +1,8 @@
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
   * debian/control: Bumped Standards to 3.9.0 (no changes needed). Added Vcs-*
-    fields as package is now hosted in amavisd-new repository.
+    fields as package is now hosted in amavisd-new repository. Build-Depend on
+    debhelper changed to >= 7.0.50~.
   * debian/amavisd-milter.default: Added a note about amavisd-new TEMPDIR.
   * debian/README.Debian: Added a note about AM.PDP section in amavisd-new
     config.
