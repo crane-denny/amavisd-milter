@@ -8,5 +8,9 @@ override_dh_auto_configure:
 	--sysconfdir=/etc --localstatedir=/var/lib/amavis \
 	--with-working-dir=/var/lib/amavis/tmp \
 
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f config.sub config.guess config.status config.log
+
 override_dh_installchangelogs:
 	dh_installchangelogs CHANGES
