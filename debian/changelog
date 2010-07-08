@@ -6,6 +6,8 @@ amavisd-milter (1.5.0-2) unstable; urgency=low
     config.
   * debian/copyright: Changed to use DEP-5 proposal format.
   * debian/rules: Converted to dh usage.
+  * debian/stamp-patched, README.source: Removed as they were leftovers of
+    pre-official packages.
 
  -- Harald Jenny <harald@a-little-linux-box.at>  Thu,  8 Jul 2010 14:09:28 +0200
 
