@@ -11,9 +11,9 @@ amavisd-milter (1.5.0-2) unstable; urgency=low
     versions of config.{sub,guess} at compile time.
   * debian/stamp-patched, README.source: Removed as they were leftovers of
     pre-official packages.
-  * debian/source.lintian-overrides: Adapted override comment.
+  * debian/source.lintian-overrides: Removed due to use of autotools-dev.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Thu,  8 Jul 2010 15:14:20 +0200
+ -- Harald Jenny <harald@a-little-linux-box.at>  Thu,  8 Jul 2010 22:49:22 +0200
 
 amavisd-milter (1.5.0-1) unstable; urgency=medium
 

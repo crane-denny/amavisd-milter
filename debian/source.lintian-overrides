@@ -1,3 +1,0 @@
-# we symlink to autotools-dev provided files at compile time
-amavisd-milter source: ancient-autotools-helper-file aclocal/config.guess 2003-07-02
-amavisd-milter source: ancient-autotools-helper-file aclocal/config.sub 2003-07-04
