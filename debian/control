@@ -21,3 +21,13 @@ Description: amavisd-new interface for milter-capable MTAs
  use of the full functionality of amavisd-new. It supports using spam
  and virus information header fields, rewriting message subjects,
  adding address extensions, and selectively removing recipients.
+
+Package: amavisd-milter-dbg
+Architecture: any
+Section: debug
+Depends: ${misc:Depends}, amavisd-milter (= ${binary:Version})
+Description: amavisd-new interface for milter-capable MTAs - debugging symbols
+ This package provides a milter for amavisd-new that works with
+ Sendmail or Postfix, using the AM.PDP protocol.
+ .
+ This package contains the debugging symbols for amavisd-milter.
