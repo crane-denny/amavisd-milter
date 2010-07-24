@@ -1,12 +1,20 @@
+amavisd-milter (1.5.0-3) unstable; urgency=low
+
+  * debian/changelog: added thanks to initiator of two changes (forgot last
+    time).
+
+ -- Harald Jenny <harald@a-little-linux-box.at>  Sat, 24 Jul 2010 03:01:07 +0200
+
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
   * debian/control: Bumped Standards to 3.9.0 (no changes needed). Added Vcs-*
     fields as package is now hosted in amavisd-new repository. Build-Depend on
     debhelper changed to >= 7.0.50~. Build-Depend on autotools-dev added. Added
     an entry for the amavisd-milter-dbg package.
-  * debian/amavisd-milter.default: Added a note about amavisd-new TEMPDIR.
+  * debian/amavisd-milter.default: Added a note about amavisd-new TEMPDIR
+    (thanks to Miguel A. Novo for the hint).
   * debian/README.Debian: Added a note about AM.PDP section in amavisd-new
-    config.
+    config (thanks to Miguel A. Novo for the hint).
   * debian/copyright: Changed to use DEP-5 proposal format.
   * debian/rules: Converted to dh usage. Added code to symlink to autotools-dev
     versions of config.{sub,guess} at compile time. Added rules to build a
