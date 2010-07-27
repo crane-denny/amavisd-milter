@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 7.0.50~), autotools-dev, libmilter-dev
 Homepage: http://amavisd-milter.sourceforge.net/
 Vcs-Browser: http://hg.debian.org/hg/amavisd-new/amavisd-milter
 Vcs-Hg: http://hg.debian.org/hg/amavisd-new/amavisd-milter
-Standards-Version: 3.9.0
+Standards-Version: 3.9.1
 
 Package: amavisd-milter
 Architecture: any
