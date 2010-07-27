@@ -10,8 +10,10 @@ amavisd-milter (1.5.0-3) unstable; urgency=low
       Breaks (overlooked this fact last time).
   * debian/rules:
     - Added build dependency on hardening-includes.
+    - Changed dh_installinit invocation to restart amavisd-milter after upgrade
+      for minimizing daemon downtime.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Sat, 24 Jul 2010 03:01:07 +0200
+ -- Harald Jenny <harald@a-little-linux-box.at>  Tue, 27 Jul 2010 22:57:26 +0200
 
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
