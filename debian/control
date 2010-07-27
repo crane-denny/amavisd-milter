@@ -12,7 +12,7 @@ Package: amavisd-milter
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, amavisd-new (>= 2.4.3)
 Recommends: sendmail (>= 8.13.8-3) | postfix (>= 2.3.8-2+etch1)
-Conflicts: amavisd-new-milter
+Breaks: amavisd-new-milter
 Description: amavisd-new interface for milter-capable MTAs
  This package provides a milter for amavisd-new that works with
  Sendmail or Postfix, using the AM.PDP protocol.
