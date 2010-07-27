@@ -2,7 +2,7 @@ Source: amavisd-milter
 Section: mail
 Priority: extra
 Maintainer: Harald Jenny <harald@a-little-linux-box.at>
-Build-Depends: debhelper (>= 7.0.50~), autotools-dev, libmilter-dev
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev, libmilter-dev, hardening-includes
 Homepage: http://amavisd-milter.sourceforge.net/
 Vcs-Browser: http://hg.debian.org/hg/amavisd-new/amavisd-milter
 Vcs-Hg: http://hg.debian.org/hg/amavisd-new/amavisd-milter
