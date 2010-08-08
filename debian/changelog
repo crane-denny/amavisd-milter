@@ -5,17 +5,17 @@ amavisd-milter (1.5.0-3) unstable; urgency=low
     - Reformatted changelog for better legibility.
   * debian/control:
     - Bumped Standards to 3.9.1 (no changes needed).
-    - Added rules to include hardening flags in compilation.
+    - Added build dependency on hardening-includes.
     - Really make package 3.9.0 Standards compliant by changing Conflicts to
       Breaks (overlooked this fact last time).
     - Added Provides and Replaces for amavisd-new-milter to simplify upgrading
       from lenny.
   * debian/rules:
-    - Added build dependency on hardening-includes.
+    - Added rules to include hardening flags in compilation.
     - Changed dh_installinit invocation to restart amavisd-milter after upgrade
       for minimizing daemon downtime.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Tue, 27 Jul 2010 22:57:26 +0200
+ -- Harald Jenny <harald@a-little-linux-box.at>  Sun,  8 Aug 2010 20:18:55 +0200
 
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
