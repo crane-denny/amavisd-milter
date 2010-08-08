@@ -19,6 +19,7 @@ override_dh_auto_configure:
 	dh_auto_configure -- --prefix=/usr --mandir=\$${prefix}/share/man \
 	--sysconfdir=/etc --localstatedir=/var/lib/amavis \
 	--with-working-dir=/var/lib/amavis/tmp \
+	CFLAGS=$(CFLAGS) LDFLAGS=$(LDFLAGS) \
 
 
 override_dh_auto_install:
