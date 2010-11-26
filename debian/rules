@@ -37,9 +37,6 @@ override_dh_auto_clean:
 		mv aclocal/config.guess_ORIG aclocal/config.guess; \
 	fi
 
-override_dh_installchangelogs:
-	dh_installchangelogs CHANGES
-
 override_dh_installdocs:
 	dh_installdocs -Namavisd-milter-dbg
 	dh_installdocs -pamavisd-milter-dbg --link-doc=amavisd-milter

@@ -14,6 +14,8 @@ amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
     - Added rules to include hardening flags in compilation.
     - Changed dh_installinit invocation to restart amavisd-milter after upgrade
       for minimizing daemon downtime.
+    - Removed dh_installchangelogs override as upstream changelog gets picked
+      up automatically.
 
  -- Harald Jenny <harald@a-little-linux-box.at>  Sun,  8 Aug 2010 20:18:55 +0200
 
