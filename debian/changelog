@@ -1,4 +1,4 @@
-amavisd-milter (1.5.0-3) unstable; urgency=low
+amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
 
   * debian/changelog:
     - Added thanks to initiator of two changes (forgot last time).
