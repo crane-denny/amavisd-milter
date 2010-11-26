@@ -1,7 +1,7 @@
 Description: Adapt location of pidfile for Debian
-Author: Harald Jenny <harald@a-little-linux-box.ag>
+Author: Harald Jenny <harald@a-little-linux-box.at>
 Forwarded: not-needed
-Last-Update: 2010-03-16
+Last-Update: 2010-10-26
 
 Index: b/amavisd-milter/main.c
 ===================================================================

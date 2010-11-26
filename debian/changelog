@@ -16,8 +16,11 @@ amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
       for minimizing daemon downtime.
     - Removed dh_installchangelogs override as upstream changelog gets picked
       up automatically.
+  * debian/patches/*-location:
+    - Corrected the mail address in the patches and modified the timestamp
+      accordingly.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Sun,  8 Aug 2010 20:18:55 +0200
+ -- Harald Jenny <harald@a-little-linux-box.at>  Fri, 26 Nov 2010 15:19:32 +0100
 
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
