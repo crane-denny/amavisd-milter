@@ -1,0 +1,27 @@
+Description: Fix LDFLAGS typo when compiling for Debian
+Author: Petr Rehor <rx@rx.cz>
+Origin: upstream, http://amavisd-milter.cvs.sourceforge.net/viewvc/amavisd-milter/amavisd-milter/aclocal/ax_path_milter.m4?r1=1.3&r2=1.4
+Last-Update: 2010-10-26
+
+Index: amavisd-milter/aclocal/ax_path_milter.m4
+===================================================================
+--- amavisd-milter.orig/aclocal/ax_path_milter.m4	2010-11-26 15:47:10.837523721 +0100
++++ amavisd-milter/aclocal/ax_path_milter.m4	2010-11-26 15:47:26.625537144 +0100
+@@ -130,7 +130,7 @@
+   # Debian use for libmilter.a /usr/lib/libmilter instead of /usr/lib
+   if test "$ax_path_milter_ok" = "no" ; then
+     unset ac_cv_lib_milter_smfi_main
+-    ac_milter_save_LDFLAGS="$LDLFAGS"
++    ac_milter_save_LDFLAGS="$LDFLAGS"
+     MILTER_LDFLAGS="-L/usr/lib/libmilter"
+     LDFLAGS="$MILTER_LDFLAGS $LDFLAGS"
+     AC_CHECK_HEADER([libmilter/mfapi.h],[
+@@ -309,7 +309,7 @@
+     CPPFLAGS="$CPPFLAGS $MILTER_CPPFLAGS"
+ 
+     # Save and modify LDFLAGS.
+-    ac_milter_save_LDFLAGS="$LDLFAGS"
++    ac_milter_save_LDFLAGS="$LDFLAGS"
+     MILTER_LDFLAGS="-L${SENDMAIL_BASE_DIR}/${SENDMAIL_OBJ_DIR}/libmilter"
+     LDFLAGS="$MILTER_LDFLAGS $LDFLAGS"
+ 

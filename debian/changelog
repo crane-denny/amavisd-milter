@@ -19,8 +19,14 @@ amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
   * debian/patches/*-location:
     - Corrected the mail address in the patches and modified the timestamp
       accordingly.
+  * debian/patches/ax_path_milter-flags-fix:
+    - Grabbed patch from upstream CVS to fix problem with LDFLAGS (requiring
+      recreation of configure script).
+  * debian/patches/configure-flags-fix:
+    - Created patch to modify configure directly instead of recreating it (to
+      minimize changeset).
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Fri, 26 Nov 2010 15:19:32 +0100
+ -- Harald Jenny <harald@a-little-linux-box.at>  Fri, 26 Nov 2010 16:48:10 +0100
 
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
