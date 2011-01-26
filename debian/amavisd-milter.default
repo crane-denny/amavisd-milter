@@ -1,10 +1,10 @@
 # Defaults for amavisd-milter initscript
 # sourced by /etc/init.d/amavisd-milter
 # installed at /etc/default/amavisd-milter by the maintainer scripts
-# 2010-07-07 Harald Jenny
+# 2011-01-26 Harald Jenny
 
 # The user should be the one amavisd-new is running as
-#USER=amavis
+#SYSTEMUSER=amavis
 
 # Pidfile is placed in run-directory from amavisd-new
 #PIDFILE=/var/run/amavis/amavisd-milter.pid

@@ -30,6 +30,14 @@ amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
       minimize changeset).
   * debian/compat:
     - Bumped to 8.
+  * debian/amavisd-milter.init:
+    - Rewrote some parts of the init script to make the code more error
+      resistant (thanks to Gabor Kiss for the initial bug report and Teodor
+      Micu and Agustin Martin for the valuable help).
+      Closes: #609762: amavisd-milter: Init script changes owner of current
+                       directory to 'amavis'
+  * debian/amavisd-milter.default:
+    - Modified configfile to comply with changed code in init script.
 
  -- Harald Jenny <harald@a-little-linux-box.at>  Weg, 26 Jan 2011 05:52:50 +0100
 
