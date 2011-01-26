@@ -29,7 +29,7 @@ amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
     - Created patch to modify configure directly instead of recreating it (to
       minimize changeset).
   * debian/compat:
-    - Bumped to 8.
+    - Bumped Version to 8.
   * debian/amavisd-milter.init:
     - Rewrote some parts of the init script to make the code more error
       resistant (thanks to Gabor Kiss for the initial bug report and Teodor
