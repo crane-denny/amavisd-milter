@@ -5,37 +5,16 @@ CFLAGS += $(HARDENING_CFLAGS)
 LDFLAGS += $(HARDENING_LDFLAGS)
 
 %:
-	dh $@
+	dh $@ --with autotools_dev
 
 override_dh_auto_configure:
-	if [ -f aclocal/config.sub ]; then \
-		mv aclocal/config.sub aclocal/config.sub_ORIG; \
-		ln -sf /usr/share/misc/config.sub aclocal/; \
-	fi
-	if [ -f aclocal/config.guess ]; then \
-		mv aclocal/config.guess aclocal/config.guess_ORIG; \
-		ln -sf /usr/share/misc/config.guess aclocal/; \
-	fi
 	dh_auto_configure -- --prefix=/usr --mandir=\$${prefix}/share/man \
 	--sysconfdir=/etc --localstatedir=/var/lib/amavis \
 	--with-working-dir=/var/lib/amavis/tmp \
-	CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-
+	CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
 
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/amavisd-milter
-
-override_dh_auto_clean:
-	dh_auto_clean
-	rm -f config.sub config.guess config.status config.log
-	if [ -L aclocal/config.sub ]; then \
-		rm -f aclocal/config.sub; \
-		mv aclocal/config.sub_ORIG aclocal/config.sub; \
-	fi
-	if [ -L aclocal/config.guess ]; then \
-		rm -f aclocal/config.guess; \
-		mv aclocal/config.guess_ORIG aclocal/config.guess; \
-	fi
 
 override_dh_installdocs:
 	dh_installdocs -Namavisd-milter-dbg
