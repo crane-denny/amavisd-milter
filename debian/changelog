@@ -10,12 +10,15 @@ amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
       Breaks (overlooked this fact last time).
     - Added Provides and Replaces for amavisd-new-milter to simplify upgrading
       from lenny.
+    - Build-Depend on debhelper changed to >= 8.0.0.
   * debian/rules:
     - Added rules to include hardening flags in compilation.
     - Changed dh_installinit invocation to restart amavisd-milter after upgrade
       for minimizing daemon downtime.
     - Removed dh_installchangelogs override as upstream changelog gets picked
       up automatically.
+    - Changed to use autotools_dev option with dh.
+    - Cleaned up and minimized ruleset.
   * debian/patches/*-location:
     - Corrected the mail address in the patches and modified the timestamp
       accordingly.
@@ -25,8 +28,10 @@ amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
   * debian/patches/configure-flags-fix:
     - Created patch to modify configure directly instead of recreating it (to
       minimize changeset).
+  * debian/compat:
+    - Bumped to 8.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Fri, 26 Nov 2010 16:48:10 +0100
+ -- Harald Jenny <harald@a-little-linux-box.at>  Weg, 26 Jan 2011 05:52:50 +0100
 
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
