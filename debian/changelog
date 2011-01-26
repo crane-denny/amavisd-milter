@@ -38,8 +38,11 @@ amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
                        directory to 'amavis'
   * debian/amavisd-milter.default:
     - Modified configfile to comply with changed code in init script.
+  * debian/copyright:
+    - Modified to comply with current DEP-5 candidate (thanks to Dominique
+      Dumont for the libconfig-model-perl parser).
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Weg, 26 Jan 2011 05:52:50 +0100
+ -- Harald Jenny <harald@a-little-linux-box.at>  Weg, 26 Jan 2011 06:26:15 +0100
 
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
