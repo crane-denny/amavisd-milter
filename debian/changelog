@@ -1,4 +1,4 @@
-amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
+amavisd-milter (1.5.0-3) unstable; urgency=low
 
   * debian/changelog:
     - Added thanks to initiator of two changes (forgot last time).
@@ -9,7 +9,7 @@ amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
     - Really make package 3.9.0 Standards compliant by changing Conflicts to
       Breaks (overlooked this fact last time).
     - Added Provides and Replaces for amavisd-new-milter to simplify upgrading
-      from lenny.
+      from lenny to squeeze-backports.
     - Build-Depend on debhelper changed to >= 8.0.0.
     - Made build depedency on autotools-dev versioned to >= 20100122.1 (needed
       for debhelper helpers).
@@ -46,7 +46,7 @@ amavisd-milter (1.5.0-3~experimental+1) experimental; urgency=low
     - Modified to comply with current DEP-5 candidate (thanks to Dominique
       Dumont for the libconfig-model-perl parser).
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Wed, 26 Jan 2011 07:05:50 +0100
+ -- Harald Jenny <harald@a-little-linux-box.at>  Tue, 10 Feb 2011 11:20:11 +0100
 
 amavisd-milter (1.5.0-2) unstable; urgency=low
 
