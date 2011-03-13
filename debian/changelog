@@ -45,6 +45,8 @@ amavisd-milter (1.5.0-3) unstable; urgency=low
   * debian/copyright:
     - Modified to comply with current DEP-5 candidate (thanks to Dominique
       Dumont for the libconfig-model-perl parser).
+    - Changed license for debian packaging to match the one used by upstream
+      (eases patch exchange).
 
  -- Harald Jenny <harald@a-little-linux-box.at>  Tue, 10 Feb 2011 11:20:11 +0100
 
