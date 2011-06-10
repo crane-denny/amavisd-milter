@@ -56,7 +56,7 @@ amavisd-milter (1.5.0-3) unstable; urgency=low
       Dumont for the libconfig-model-perl parser).
     - Changed license for debian packaging to match the one used by upstream
       simplifying patch exchange (thanks to Paul Wise and Charles Plessy for
-      the the valuable help).
+      the valuable help).
 
  -- Harald Jenny <harald@a-little-linux-box.at>  Mon, 28 Mar 2011 22:38:07 +0200
 
