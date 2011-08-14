@@ -1,8 +1,6 @@
 #!/usr/bin/make -f
 
 include /usr/share/hardening-includes/hardening.make
-CFLAGS += $(HARDENING_CFLAGS)
-LDFLAGS += $(HARDENING_LDFLAGS)
 
 %:
 	dh $@ --with autotools_dev
@@ -11,7 +9,8 @@ override_dh_auto_configure:
 	dh_auto_configure -- --prefix=/usr --mandir=\$${prefix}/share/man \
 	--sysconfdir=/etc --localstatedir=/var/lib/amavis \
 	--with-working-dir=/var/lib/amavis/tmp \
-	CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
+	CFLAGS="$(CFLAGS) $(HARDENING_CFLAGS)" \
+	LDFLAGS="$(LDFLAGS) $(HARDENING_LDFLAGS)"
 
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/amavisd-milter

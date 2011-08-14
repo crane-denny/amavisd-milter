@@ -6,6 +6,9 @@ amavisd-milter (1.5.0-4) unstable; urgency=low
       (thanks to Alexander Wirt for the conversion from mercurial).
   * debian/changelog:
     - Fixed small word duplication error.
+  * debian/rules:
+    - Modified inclusion method of HARDENING_CFLAGS and HARDENING_LDFLAGS
+      from hardening-includes packge to avoid duplication of these params.
 
  -- Harald Jenny <harald@a-little-linux-box.at>  Fri, 23 Aug 2011 23:01:11 +0200
 
