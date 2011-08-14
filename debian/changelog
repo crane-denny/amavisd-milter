@@ -4,8 +4,10 @@ amavisd-milter (1.5.0-4) unstable; urgency=low
     - Bumped Standards to 3.9.2 (no changes needed).
     - Changed Vcs-* fields as package is now maintained in a git repository
       (thanks to Alexander Wirt for the conversion from mercurial).
+  * debian/changelog:
+    - Fixed small word duplication error.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Fri, 10 Jun 2011 12:07:46 +0200
+ -- Harald Jenny <harald@a-little-linux-box.at>  Fri, 23 Aug 2011 23:01:11 +0200
 
 amavisd-milter (1.5.0-3) unstable; urgency=low
 
