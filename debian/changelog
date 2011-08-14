@@ -9,8 +9,10 @@ amavisd-milter (1.5.0-4) unstable; urgency=low
   * debian/rules:
     - Modified inclusion method of HARDENING_CFLAGS and HARDENING_LDFLAGS
       from hardening-includes packge to avoid duplication of these params.
+    - Stopped unnecessary linking of amavisd-milter binary by adding
+     "-Wl,--as-needed" to LDFLAGS.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Fri, 23 Aug 2011 23:01:11 +0200
+ -- Harald Jenny <harald@a-little-linux-box.at>  Fri, 23 Aug 2011 23:24:41 +0200
 
 amavisd-milter (1.5.0-3) unstable; urgency=low
 
