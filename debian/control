@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Harald Jenny <harald@a-little-linux-box.at>
 Build-Depends: debhelper (>= 8), autotools-dev (>= 20100122.1), libmilter-dev, hardening-includes
 Homepage: http://amavisd-milter.sourceforge.net/
-Vcs-Browser: http://anonscm.debian.org/git/amavisd-new/pkg-amavisd-milter.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=amavisd-new/pkg-amavisd-milter.git
 Vcs-Git: git://anonscm.debian.org/amavisd-new/pkg-amavisd-milter.git
 Standards-Version: 3.9.2
 
