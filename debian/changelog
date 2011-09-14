@@ -1,3 +1,11 @@
+amavisd-milter (1.5.0-5) unstable; urgency=low
+
+  * debian/copyright:
+    - Changed format specification URL from svn to anonscm and modified
+      revision number.
+
+ -- Harald Jenny <harald@a-little-linux-box.at>  Sat, 27 Aug 2011 22:03:40 +0200
+
 amavisd-milter (1.5.0-4) unstable; urgency=low
 
   * debian/control:
