@@ -7,8 +7,7 @@ Files: *
 Copyright: 2005, Petr Rehor <rx@rx.cz>
 License: BSD-like
 
-Files: compat/fts_compat.h, compat/daemon.c, compat/mkdtemp.c,
-       compat/fts_open.c
+Files: compat/fts_compat.h compat/daemon.c compat/mkdtemp.c compat/fts_open.c
 Copyright: 1987, 1989, 1990, 1993, 1994, The Regents of the University of
            California
 License: BSD
