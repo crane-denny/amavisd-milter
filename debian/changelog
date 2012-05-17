@@ -4,6 +4,7 @@ amavisd-milter (1.5.0-5) unstable; urgency=low
     - Changed format specification URL from svn to released version 1.0.
     - Corrected file listing to use spaces instead of commas to comply with
       DEP-5 and satisfy lintian.
+    - Added 2012 to the copyright years for the debian packaging.
 
  -- Harald Jenny <harald@a-little-linux-box.at>  Wed, 14 Sep 2011 18:27:58 +0200
 
