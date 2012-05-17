@@ -1,8 +1,7 @@
 amavisd-milter (1.5.0-5) unstable; urgency=low
 
   * debian/copyright:
-    - Changed format specification URL from svn to anonscm and modified
-      revision number.
+    - Changed format specification URL from svn to released version 1.0.
     - Corrected file listing to use spaces instead of commas to comply with
       DEP-5 and satisfy lintian.
 
