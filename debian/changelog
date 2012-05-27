@@ -10,10 +10,13 @@ amavisd-milter (1.5.0-5) unstable; urgency=low
     - Removed hardening-includes from Build-Depends and instead add a versioned
       build depedency on dpkg-dev >= 1.16.1~ (needed for getting hardened
       compile flags through dpkg-buildflags).
+    - Build-Depend on debhelper >= 9.
   * debian/rules:
     - Switched from manual usage of hardening-includes to dpkg-buildflags.
+  * debian/compat:
+    - Bumped Version to 9.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Thu, 17 May 2012 21:33:04 +0200
+ -- Harald Jenny <harald@a-little-linux-box.at>  Sun, 27 May 2012 15:29:55 +0200
 
 amavisd-milter (1.5.0-4) unstable; urgency=low
 
