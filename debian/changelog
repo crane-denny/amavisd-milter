@@ -7,8 +7,13 @@ amavisd-milter (1.5.0-5) unstable; urgency=low
     - Added 2012 to the copyright years for the debian packaging.
   * debian/control:
     - Bumped Standards to 3.9.3 (changed to copyright-format 1.0).
+    - Removed hardening-includes from Build-Depends and instead add a versioned
+      build depedency on dpkg-dev >= 1.16.1~ (needed for getting hardened
+      compile flags through dpkg-buildflags).
+  * debian/rules:
+    - Switched from manual usage of hardening-includes to dpkg-buildflags.
 
- -- Harald Jenny <harald@a-little-linux-box.at>  Wed, 14 Sep 2011 18:27:58 +0200
+ -- Harald Jenny <harald@a-little-linux-box.at>  Thu, 17 May 2012 21:33:04 +0200
 
 amavisd-milter (1.5.0-4) unstable; urgency=low
 
