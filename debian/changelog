@@ -11,6 +11,8 @@ amavisd-milter (1.5.0-5) unstable; urgency=low
       build depedency on dpkg-dev >= 1.16.1~ (needed for getting hardened
       compile flags through dpkg-buildflags).
     - Build-Depend on debhelper >= 9.
+    - Removed version constraints from Build-Depends, Depends and Recommends
+      where requirements are already fulfilled in Squeeze.
   * debian/rules:
     - Switched from manual usage of hardening-includes to dpkg-buildflags.
   * debian/compat:

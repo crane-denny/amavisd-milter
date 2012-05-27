@@ -2,7 +2,7 @@ Source: amavisd-milter
 Section: mail
 Priority: extra
 Maintainer: Harald Jenny <harald@a-little-linux-box.at>
-Build-Depends: dpkg-dev (>= 1.16.1~), debhelper (>= 9), autotools-dev (>= 20100122.1), libmilter-dev
+Build-Depends: dpkg-dev (>= 1.16.1~), debhelper (>= 9), autotools-dev, libmilter-dev
 Homepage: http://amavisd-milter.sourceforge.net/
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=amavisd-new/pkg-amavisd-milter.git
 Vcs-Git: git://anonscm.debian.org/amavisd-new/pkg-amavisd-milter.git
@@ -10,8 +10,8 @@ Standards-Version: 3.9.3
 
 Package: amavisd-milter
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, libmilter1.0.1 (>= 8.14.3-9.5), amavisd-new (>= 2.4.3)
-Recommends: sendmail (>= 8.13.8-3) | postfix (>= 2.3.8-2+etch1)
+Depends: ${misc:Depends}, ${shlibs:Depends}, libmilter1.0.1 (>= 8.14.3-9.5), amavisd-new
+Recommends: sendmail | postfix
 Provides: amavisd-new-milter
 Breaks: amavisd-new-milter (<= 1:2.6.4-2)
 Replaces: amavisd-new-milter (<= 1:2.6.4-2)
