@@ -1,5 +1,49 @@
 This is the CHANGELOG for amavisd-milter.
 
+20150524:
+	amavisd-milter-1.6.1:
+
+	Bug and compatibility fixies:
+	- Fixed bug when creating amavisd-new policy bank names.
+
+20150524:
+	Fixed bug when creating amavisd-new policy bank names.
+
+	Thanks to: Christian Roessner <c@roessner-network-solutions.com>
+
+20130519:
+	amavisd-milter-1.6.0:
+
+	New features:
+	- Added new amavisd-milter option -B which passes value of
+	  {daemon_name} milter macro as amavisd-new policy bank name.
+
+	Bug and compatibility fixies:
+	- Added amavisd-milter.spec for compilation with rpmbuild.
+	- Fixed typo which prevents using LDFLAGS on Debian.
+	- Fixed missing definition of true and false in libmilter/mfapi.h.
+
+20130422:
+	Added new amavisd-milter option -B which uses value of {daemon_name}
+	milter macro as amavisd-new policy bank name.
+
+	Thanks to: Andreas Schulze
+
+20130125:
+	Included amavisd-milter.spec for compilation with rpmbuild.
+
+	Thanks to: Jo Rhett <jrhett@netconsonance.com>
+
+20120727:
+	Include stdbool.h before libmilter/mfapi.h in compat/compat.h because
+	libmilter/mfapi.h not define true and false.
+
+20101105:
+	Fixed typo in aclocal/ax_path_milter.m4 which prevents using LDFLAGS
+	on Debian.
+
+        Thanks to: Harald Jenny <harald@a-little-linux-box.at>
+
 20100502:
 	amavisd-milter-1.5.0:
 
@@ -9,7 +53,7 @@ This is the CHANGELOG for amavisd-milter.
 20100501:
 	Amavisd-new 2.7.0 introduce new AM.PDP response log_id.
 
-	Thanks to: Andreas Schulze <andreas.schulze@datev.de>
+	Thanks to: Andreas Schulze
 
 20100131:
 	amavisd-milter-1.4.1:
@@ -32,7 +76,7 @@ This is the CHANGELOG for amavisd-milter.
 	Added new amavisd-milter option -P which causes that mails pass through
 	when amavisd-new fails.
 
-	Thans to: Uli Schellhaas <uli.schellhaas@memware.de>
+	Thanks to: Uli Schellhaas <uli.schellhaas@memware.de>
 
 20090803:
 	Bug fix - sendmail 8.14 introduces three new callbacks.
@@ -407,4 +451,4 @@ This is the CHANGELOG for amavisd-milter.
 	First public release.  Fully tested on FreeBSD 5.3.
 
 
-$Id: CHANGES,v 1.72 2010/05/02 11:20:50 reho Exp $
+$Id: CHANGES,v 1.81 2015/05/24 20:50:39 reho Exp $

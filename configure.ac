@@ -1,6 +1,6 @@
-dnl $Id: configure.ac,v 1.47 2010/05/02 11:20:51 reho Exp $
+dnl $Id: configure.ac,v 1.51 2015/05/24 20:50:39 reho Exp $
 
-AC_INIT(amavisd-milter, 1.5.0)
+AC_INIT(amavisd-milter, 1.6.1)
 AC_PREREQ(2.62)
 
 AC_CONFIG_SRCDIR(aclocal/acinclude.m4)
@@ -24,6 +24,7 @@ AC_PROG_RANLIB
 
 AC_PROG_CC
 AM_PROG_CC_C_O
+AM_PROG_AR
 ACX_ENABLE_DEBUG
 ACX_PTHREAD([LIBS="$PTHREAD_LIBS $LIBS" CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
   CC="$PTHREAD_CC"] AC_DEFINE(HAVE_PTHREAD, 1),
@@ -67,7 +68,7 @@ AC_CHECK_AF_INET6
 AC_CHECK_INET6_ADDRSTRLEN
 AC_CHECK_STRUCT_SOCKADDR_IN6
 
-AC_CONFIG_FILES([Makefile amavisd-milter/Makefile compat/Makefile])
+AC_CONFIG_FILES([Makefile amavisd-milter/Makefile compat/Makefile amavisd-milter.spec])
 AC_CONFIG_FILES([autoconf.sh], [chmod +x autoconf.sh])
 
 AC_LOCAL_STATE_DIR
