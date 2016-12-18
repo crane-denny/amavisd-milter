@@ -4,7 +4,7 @@ NAME
      amavisd-milter -- sendmail milter for amavisd-new
 
 SYNOPSIS
-     amavisd-milter [-fhv] [-d debug-level] [-D delivery-care-of]
+     amavisd-milter [-Bfhv] [-d debug-level] [-D delivery-care-of]
 		    [-m max-conns] [-M max-wait] [-p pidfile] [-P]
 		    [-q backlog] [-s socket] [-t timeout] [-S socket]
 		    [-T timeout] [-w directory]
@@ -29,6 +29,9 @@ DESCRIPTION
 
    Options
      The options are as follows:
+
+     -B      Uses {daemon_name} macro as a policy bank name (see POLICY BANKS
+	     below).
 
      -d debug-level
 	     Set the debug level to debug-level.  Debugging traces become more
@@ -132,9 +135,13 @@ FILES
      /var/amavis
 	     The default working directory.
 
-POLICY BANK
-     When remote client is authenticated, amavisd-milter forward this informa-
-     tion to amavisd-new through AM.PDP request attribute policy_bank:
+POLICY BANKS
+     If the option -B is enabled, amavisd-milter uses the value of the milter
+     macro {daemon_name} as a name of the amavisd-new policy bank. Usualy this
+     milter macro is set to name of the MTA.
+
+     When remote client is authenticated, amavisd-milter uses this information
+     as a name of the amavisd-new policy banks:
 
      SMTP_AUTH
 	     Indicate that the remote client is authenticated.

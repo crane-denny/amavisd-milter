@@ -40,13 +40,13 @@
 /* Define if dirfd() is a macro. */
 #undef HAVE_DIRFD_AS_MACRO
 
-/* Define to 1 if `dd_fd' is member of `DIR'. */
+/* Define to 1 if `dd_fd' is a member of `DIR'. */
 #undef HAVE_DIR_DD_FD
 
-/* Define to 1 if `d_fd' is member of `DIR'. */
+/* Define to 1 if `d_fd' is a member of `DIR'. */
 #undef HAVE_DIR_D_FD
 
-/* Define to 1 if `__dd_fd' is member of `DIR'. */
+/* Define to 1 if `__dd_fd' is a member of `DIR'. */
 #undef HAVE_DIR___DD_FD
 
 /* Define to 1 if you have the <errno.h> header file. */
@@ -130,7 +130,7 @@
 /* Define to 1 if the system has the type `struct sockaddr_in6'. */
 #undef HAVE_STRUCT_SOCKADDR_IN6
 
-/* Define to 1 if `tm_zone' is member of `struct tm'. */
+/* Define to 1 if `tm_zone' is a member of `struct tm'. */
 #undef HAVE_STRUCT_TM_TM_ZONE
 
 /* Define to 1 if you have the <sysexits.h> header file. */
@@ -185,9 +185,6 @@
 /* Default location to store state files. */
 #undef LOCAL_STATE_DIR
 
-/* Define to 1 if your C compiler doesn't accept -c and -o together. */
-#undef NO_MINUS_C_MINUS_O
-
 /* Name of package */
 #undef PACKAGE
 
@@ -202,6 +199,9 @@
 
 /* Define to the one symbol short name of this package. */
 #undef PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
 
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION

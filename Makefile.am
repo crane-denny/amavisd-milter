@@ -1,4 +1,4 @@
-# $Id: Makefile.am,v 1.4 2006/01/24 15:20:02 reho Exp $
+# $Id: Makefile.am,v 1.10 2015/05/24 22:02:49 reho Exp $
 
 # Subdirectories
 SUBDIRS= \
@@ -24,12 +24,14 @@ EXTRA_DIST= \
 	Makefile.am \
 	Makefile.in \
 	aclocal.m4 \
+	amavisd-milter.spec \
+	autoconf.sh \
 	config.h.in \
 	configure \
 	configure.ac
 
 ../website/amavisd-milter.html: amavisd-milter/amavisd-milter.8
-	nroff -mdoc amavisd-milter/amavisd-milter.8 | \
+	env LC_ALL=C nroff -c -mdoc amavisd-milter/amavisd-milter.8 | \
 	sed -e '1s/.*//' -e '$$s/.*//' | \
 	man2html -topm 0 -botm 0 -title "amavisd-milter(8) manual page"| \
 	sed -e 's;\(http:[^    ]*\);<a href="\1">\1</a>;' \
@@ -40,7 +42,7 @@ EXTRA_DIST= \
 website: ../website/amavisd-milter.html
 
 README: amavisd-milter/amavisd-milter.8
-	nroff -mdoc amavisd-milter/amavisd-milter.8 | col -b | \
+	env LC_ALL=C nroff -c -mdoc amavisd-milter/amavisd-milter.8 | col -b | \
 	sed -e '1s/.*/This is the README for the amavisd-milter(8)./' \
 	    -e '$$s/.*//' > README
 
@@ -50,6 +52,7 @@ dist-hook: README
 
 maintainer-clean-local:
 	-rm -f Makefile.in
+	-rm -f aclocal/ar-lib
 	-rm -f aclocal/compile
 	-rm -f aclocal/config.guess
 	-rm -f aclocal/config.sub
