@@ -1,13 +1,13 @@
 Description: Adapt paths in manpage for Debian
-Author: Harald Jenny <harald@a-little-linux-box.at>
+Author: Florian Pelgrim <florian.pelgrim@craneworks.de>
 Forwarded: not-needed
-Last-Update: 2010-10-26
+Last-Update: 2016-12-11
 
 Index: b/amavisd-milter/amavisd-milter.8
 ===================================================================
---- a/amavisd-milter/amavisd-milter.8	2009-10-29 15:53:14.000000000 +0100
-+++ b/amavisd-milter/amavisd-milter.8	2010-02-23 19:30:44.000000000 +0100
-@@ -106,7 +106,7 @@
+--- a/amavisd-milter/amavisd-milter.8
++++ b/amavisd-milter/amavisd-milter.8
+@@ -112,7 +112,7 @@
  20 minutes.
  We suggest to use less than 10 minutes. 
  .It Fl p Ar pidfile
@@ -16,7 +16,7 @@ Index: b/amavisd-milter/amavisd-milter.8
  .It Fl P
  When
  .Sy amavisd-new
-@@ -121,7 +121,7 @@
+@@ -127,7 +127,7 @@
  .Sy sendmail
  and
  .Nm
@@ -25,7 +25,7 @@ Index: b/amavisd-milter/amavisd-milter.8
  The protocol spoken over this socket is
  .Sy MILTER
  (Mail FILTER).
-@@ -146,7 +146,7 @@
+@@ -152,7 +152,7 @@
  .Nm
  and
  .Sy amavisd-new
@@ -34,7 +34,7 @@ Index: b/amavisd-milter/amavisd-milter.8
  The protocol spoken over this socket is
  .Sy AM.PDP
  (AMavis Policy Delegation Protocol).
-@@ -181,7 +181,7 @@
+@@ -187,7 +187,7 @@
  .It Fl v
  Report the version number and exit.
  .It Fl w Ar directory
@@ -43,7 +43,7 @@ Index: b/amavisd-milter/amavisd-milter.8
  .El
  .Ss Limited support for sendmail 8.12
  .Bl -bullet -compact
-@@ -211,17 +211,17 @@
+@@ -217,17 +217,17 @@
  .Pp
  .Sh FILES
  .Bl -tag -width indent
@@ -64,8 +64,8 @@ Index: b/amavisd-milter/amavisd-milter.8
 +.It Em /var/lib/amavis/tmp
  The default working directory.
  .El
- .Sh POLICY BANK
-@@ -257,7 +257,7 @@
+ .Sh POLICY BANKS
+@@ -271,7 +271,7 @@
  define(`confMILTER_MACROS_ENVFROM',
  	confMILTER_MACROS_ENVFROM`, r, b')
  INPUT_MAIL_FILTER(`amavisd-milter',
@@ -74,7 +74,7 @@ Index: b/amavisd-milter/amavisd-milter.8
  	F=T, T=S:10m;R:10m;E:10m')
  .Ed
  .Pp
-@@ -273,29 +273,29 @@
+@@ -287,29 +287,29 @@
  .Pp
  First create working directory:
  .Bd -literal -offset indent
