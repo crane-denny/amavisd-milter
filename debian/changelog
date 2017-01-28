@@ -4,6 +4,7 @@ amavisd-milter (1.6.1-1) UNRELEASED; urgency=medium
   * Updating to version 1.6.1
   * debian/patches
     - removing unused patches for LDFLAGS
+  * Using unapply-patches for gbd
 
  -- Florian Pelgrim <florian.pelgrim@craneworks.de>  Sun, 18 Dec 2016 05:54:35 +0100
 
